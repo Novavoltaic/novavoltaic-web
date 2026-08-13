@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+<title id="title">NOVAVOLTAIC SpA</title>
+<desc id="desc">Logotipo de NOVAVOLTAIC SpA, soluciones eléctricas</desc>
+<rect width="620" height="150" rx="18" fill="#07182d"/>
+<g transform="translate(22 20)">
+  <path d="M0 92 L28 18 L56 72 L84 0 L113 92 L84 92 L68 43 L49 92 L31 92 L15 52 L10 92 Z" fill="#ffc400"/>
+  <path d="M48 92 L82 28 L113 92 L92 92 L81 68 L68 92 Z" fill="#ffffff"/>
+</g>
+<text x="155" y="66" font-family="Montserrat,Arial,sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="1">NOVA VOLTAIC</text>
+<text x="157" y="101" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#ffc400">SpA</text>
+<text x="215" y="101" font-family="Montserrat,Arial,sans-serif" font-size="15" font-weight="600" fill="#dbe5ef" letter-spacing="2">SOLUCIONES ELÉCTRICAS</text>
+</svg>
