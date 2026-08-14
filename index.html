@@ -1,56 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NOVAVOLTAIC SpA - Soluciones eléctricas en la Región del Maule. Mantención, instalaciones, empalmes, TE1, emergencias 24/7, diseño de proyectos, automatización inteligente y paneles solares.">
-  <title>NOVAVOLTAIC SpA | Soluciones Eléctricas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--navy:#07182d;--navy2:#0d2948;--yellow:#ffc400;--white:#fff;--text:#172235;--muted:#667085;--bg:#f6f8fb}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--text);background:var(--white)}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,24,45,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;letter-spacing:.4px}
-    .brand-logo{width:178px;height:auto;display:block}
-    .brand small{display:block;font-size:10px;font-weight:600;opacity:.8;margin-top:2px}
-    .menu{display:flex;gap:25px;color:#fff;font-size:12px;font-weight:600}
-    .menu a:hover{color:var(--yellow)}
-    .hero{min-height:720px;padding-top:76px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(3,15,31,.88) 0%,rgba(3,15,31,.62) 42%,rgba(3,15,31,.15) 100%),url('proyecto-electrico.png') center/cover}
-    .hero-content{max-width:650px;color:#fff;padding:70px 0}
-    .eyebrow{color:var(--yellow);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase}
-    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:14px 0 18px}
-    .hero h1 span{color:var(--yellow)}
-    .hero p{font-size:18px;line-height:1.7;max-width:600px;color:#eef3f8}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
-    .chip{padding:9px 13px;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-size:12px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:8px;font-weight:800;font-size:13px}
-    .btn-primary{background:var(--yellow);color:#111}
-    .btn-secondary{border:1px solid #fff;color:#fff}
-    .section{padding:86px 0}.section.alt{background:var(--bg)}
-    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}.client-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px}.client-strip span{padding:10px 14px;border:1px solid #e1e6ed;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.7px;color:#526071}.credential{display:flex;align-items:center;justify-content:space-between;gap:35px;background:var(--navy);color:#fff;border-radius:14px;padding:38px 42px}.credential .eyebrow{color:var(--yellow)}.credential h2{margin:9px 0;font-size:28px}.credential p{margin:0;max-width:700px;color:#d8e3ee;line-height:1.7;font-size:13px}.credential-badge{flex:0 0 145px;height:145px;border:2px solid var(--yellow);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--yellow);font-size:32px;font-weight:800;line-height:.9}.credential-badge span{font-size:9px;line-height:1.2;color:#fff;display:block;max-width:90px;margin:auto}
-    .section-head .eyebrow{color:#c28f00}.section-head h2{font-size:34px;margin:9px 0}.section-head p{color:var(--muted);line-height:1.7}
-    .stats{background:var(--navy);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .stat{text-align:center;padding:28px 15px;border-right:1px solid rgba(255,255,255,.12)}.stat:last-child{border:0}
-    .stat strong{display:block;color:var(--yellow);font-size:15px;margin-bottom:7px}.stat span{font-size:11px;color:#dbe5ef}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#fff;border:1px solid #e5e9ef;border-radius:12px;padding:27px;box-shadow:0 8px 25px rgba(10,25,45,.06);transition:.2s}
-    .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(10,25,45,.1)}
-    .icon{width:46px;height:46px;border-radius:10px;background:#fff5c7;color:#a97800;display:grid;place-items:center;font-size:22px;margin-bottom:17px}
-    .card h3{font-size:16px;margin:0 0 9px}.card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
-    .gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.project-note{margin-top:20px;padding:22px 25px;background:#fff8d8;border-left:5px solid var(--yellow);border-radius:8px;display:flex;flex-direction:column;gap:6px}.project-note strong{font-size:17px}.project-note span{font-size:13px;line-height:1.6;color:var(--muted)}.gallery img{width:100%;height:100%;min-height:270px;object-fit:cover;border-radius:12px;display:block}.gallery .small{display:grid;grid-template-rows:1fr 1fr;gap:18px}.gallery .small img{min-height:0}
-    .why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.why .card{text-align:center}.why .icon{margin:0 auto 14px}
-    .cta{background:linear-gradient(90deg,var(--navy),var(--navy2));color:#fff;padding:58px 0}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{margin:0 0 8px;font-size:30px}.cta p{margin:0;color:#d9e4ef;line-height:1.6}
-    footer{background:#041120;color:#fff;padding:48px 0 20px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}.footer-title{font-weight:800;margin-bottom:15px}.footer p,.footer li{font-size:12px;color:#b8c5d3;line-height:1.8}.footer ul{list-style:none;padding:0;margin:0}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:10px;color:#8292a4}
-    @media(max-width:850px){.menu{display:none}.services{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}.gallery{grid-template-columns:1fr}.cta-inner{flex-direction:column;align-items:flex-start}}
-    @media(max-width:560px){.credential{padding:28px;flex-direction:column;align-items:flex-start}.credential-badge{align-self:center;width:125px;height:125px}.hero{min-height:700px}.hero-content{padding:50px 0}.hero p{font-size:15px}.section{padding:65px 0}.services,.why{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:22px 8px}.gallery .small{grid-template-rows:auto}.gallery img{min-height:230px}.btn{width:100%}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NOVAVOLTAIC SpA - Soluciones eléctricas en la Región del Maule. Mantención, instalaciones, empalmes, servicios TE1, diseño de proyectos, automatización inteligente, paneles solares y emergencias para hogares, empresas, loteos y parcelas.">
+<title>NOVAVOLTAIC SpA | Soluciones Eléctricas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--marina-de-guerra:#07182d;--armada:#0d2948;--amarillo:#ffc400;--blanco:#fff;--texto:#172235;--apagado:#667085;--bg:#f6f8fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--texto);background:var(--blanco)}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{background:var(--marina-de-guerra);color:var(--blanco);position:sticky;top:0;z-index:20}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand-logo{width:132px;height:auto;display:block}.brand small{display:block;font-size:10px;font-weight:700;letter-spacing:.3px;color:#cbd5e1;margin-top:2px}.menu{display:flex;gap:26px;font-size:13px;font-weight:700}.menu a:hover{color:var(--amarillo)}nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.hero{min-height:560px;background:linear-gradient(90deg,rgba(7,24,45,.93) 0%,rgba(7,24,45,.72) 42%,rgba(7,24,45,.25) 100%),url('loteo-empalmes.jpeg') center/cover no-repeat;color:var(--blanco);display:flex;align-items:center}.hero-content{max-width:620px;padding:58px 0}.eyebrow{color:var(--amarillo);font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:58px;line-height:1.02;margin:12px 0 18px;font-weight:800}.hero h1 span{color:var(--amarillo)}.hero p{font-size:17px;line-height:1.65;margin:0 0 18px}.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:8px 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:12px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:8px;font-weight:800;font-size:13px}.btn-primary{background:var(--amarillo);color:#111}.btn-secondary{border:1px solid rgba(255,255,255,.7);color:#fff}
+.stats{background:var(--marina-de-guerra);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:20px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}.stat strong{display:block;color:var(--amarillo);font-size:15px;margin-bottom:7px}.stat span{font-size:11px;color:#d8e1ec}
+.section{padding:70px 0}.section-head{margin-bottom:32px}.section-head .eyebrow{color:var(--amarillo)}.section-head h2{font-size:34px;margin:8px 0}.section-head p{max-width:760px;line-height:1.7;color:var(--apagado)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid #e5eaf0;border-radius:14px;padding:24px;box-shadow:0 8px 28px rgba(15,23,42,.06)}.card h3{margin-top:0}.card p{line-height:1.7;color:var(--apagado);font-size:14px}.card img{width:100%;height:190px;object-fit:cover;border-radius:10px;margin-bottom:15px}
+.contact{background:var(--bg)}.contact-box{background:var(--marina-de-guerra);color:#fff;border-radius:18px;padding:40px;display:flex;justify-content:space-between;gap:30px;align-items:center}.contact-box p{color:#d8e1ec;line-height:1.6}.footer{background:#041120;color:#b8c4d2;padding:25px 0;font-size:12px}.footer strong{color:#fff}
+@media(max-width:850px){.hero h1{font-size:44px}.cards{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.menu{gap:12px;font-size:11px}.brand-logo{width:110px}}
+@media(max-width:560px){.container{width:min(94%,1120px)}nav{min-height:64px}.brand-logo{width:105px}.brand div{display:none}.menu{gap:10px;font-size:10px}.hero{min-height:600px}.hero-content{padding:45px 0}.hero h1{font-size:38px}.hero p{font-size:15px}.cards,.stats-grid{grid-template-columns:1fr}.contact-box{padding:28px;display:block}.btn{width:100%}}
+</style>
 </head>
 <body>
 <header>
@@ -58,7 +26,6 @@
     <nav>
       <a class="brand" href="#inicio">
         <img class="brand-logo" src="logo-novavoltaic.svg" alt="NOVAVOLTAIC SpA">
-        <div>NOVAVOLTAIC SpA<small>SOLUCIONES ELÉCTRICAS</small></div>
       </a>
       <div class="menu">
         <a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a>
@@ -75,100 +42,47 @@
       <h1>Soluciones <span>eléctricas</span> para cada proyecto.</h1>
       <p>Mantención, instalaciones, empalmes, servicios TE1, diseño de proyectos, automatización inteligente, paneles solares y emergencias para hogares, empresas, loteos y parcelas.</p>
       <div class="chips"><span class="chip">Monofásicos</span><span class="chip">Trifásicos</span><span class="chip">Empalmes</span><span class="chip">Diseño de proyectos</span><span class="chip">Automatización inteligente</span><span class="chip">Paneles solares</span><span class="chip">Emergencias 24/7</span></div>
-      <div class="actions"><a class="btn btn-primary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20una%20emergencia%20el%C3%A9ctrica">⚡ EMERGENCIAS 24/7</a><a class="btn btn-secondary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20el%C3%A9ctrico">Solicitar cotización</a></div>
+      <div class="actions"><a class="btn btn-primary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC,%20necesito%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20el%C3%A9ctrico." target="_blank" rel="noopener">⚡ EMERGENCIAS 24/7</a><a class="btn btn-secondary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20el%C3%A9ctrico">Solicitar cotización</a></div>
     </div>
   </div>
 </section>
 
 <section class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong>SEGURIDAD</strong><span>Trabajo responsable y profesional</span></div>
-    <div class="stat"><strong>EXPERIENCIA</strong><span>Soluciones para distintos proyectos</span></div>
-    <div class="stat"><strong>EMERGENCIA 24/7</strong><span>Emergencias eléctricas las 24 horas</span></div>
-    <div class="stat"><strong>REGIÓN DEL MAULE</strong><span>Atención en la región</span></div>
-  </div>
+<div class="container stats-grid">
+<div class="stat"><strong>SEGURIDAD</strong><span>Trabajo responsable y profesional</span></div>
+<div class="stat"><strong>EXPERIENCIA</strong><span>Soluciones para distintos proyectos</span></div>
+<div class="stat"><strong>EMERGENCIA 24/7</strong><span>Emergencias eléctricas las 24 horas</span></div>
+<div class="stat"><strong>REGIÓN DEL MAULE</strong><span>Atención en la región</span></div>
+</div>
 </section>
 
 <section id="nosotros" class="section">
-  <div class="container section-head">
-    <div class="eyebrow">NOVAVOLTAIC SpA</div>
-    <h2>Electricidad con soluciones de principio a fin.</h2>
-    <p>Somos una empresa dedicada a las soluciones eléctricas en toda la Región del Maule. Trabajamos con particulares, empresas, constructoras, proyectos de parcelas y loteos, desarrollando cada servicio con foco en seguridad, calidad y cumplimiento técnico.</p>
-  </div>
-  <div class="container client-strip">
-    <span>PARTICULARES</span><span>EMPRESAS</span><span>CONSTRUCTORAS</span><span>PARCELAS Y LOTEOS</span><span>PROYECTOS</span>
-  </div>
+<div class="container section-head"><div class="eyebrow">NOVAVOLTAIC SpA</div><h2>Electricidad con soluciones de principio a fin.</h2><p>Somos una empresa dedicada a las soluciones eléctricas en toda la Región del Maule. Trabajamos con particulares, empresas, constructoras, loteos y parcelas, entregando atención responsable y soluciones adaptadas a cada necesidad.</p></div>
 </section>
 
-<section id="servicios" class="section alt">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">Qué hacemos</div><h2>Nuestros servicios</h2><p>Una oferta simple para resolver necesidades eléctricas desde una falla hasta un proyecto completo.</p></div>
-    <div class="services">
-      <article class="card"><div class="icon">⚡</div><h3>Mantención eléctrica</h3><p>Mantención preventiva y correctiva, revisión de instalaciones y solución de fallas.</p></article>
-      <article class="card"><div class="icon">🔌</div><h3>Instalaciones monofásicas y trifásicas</h3><p>Instalación, modificación y ampliación de sistemas eléctricos.</p></article>
-      <article class="card"><div class="icon">🏗️</div><h3>Empalmes eléctricos</h3><p>Ejecución de empalmes y ampliaciones para viviendas, empresas, parcelas y proyectos con múltiples suministros.</p></article>
-      <article class="card"><div class="icon">📋</div><h3>Servicios TE1</h3><p>Realizamos instalaciones y la declaración/certificación TE1 correspondiente, contando con profesionales autorizados por la SEC.</p></article>
-      <article class="card"><div class="icon">🚨</div><h3>Emergencias eléctricas 24/7</h3><p>Atención de fallas eléctricas durante las 24 horas, los 7 días de la semana.</p></article>
-      <article class="card"><div class="icon">🌳</div><h3>Loteos y parcelas</h3><p>Proyectos y ejecución de soluciones eléctricas para nuevos terrenos y desarrollos.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container credential">
-    <div>
-      <div class="eyebrow">SERVICIOS Y CERTIFICACIÓN</div>
-      <h2>Instalaciones con respaldo profesional</h2>
-      <p>Contamos con profesionales autorizados por la <strong>SEC</strong> para realizar la declaración y certificación TE1 correspondiente a las instalaciones que ejecutamos.</p>
-    </div>
-    <div class="credential-badge">SEC<br><span>Profesionales autorizados</span></div>
-  </div>
+<section id="servicios" class="section" style="background:var(--bg)">
+<div class="container"><div class="section-head"><div class="eyebrow">Servicios</div><h2>Soluciones eléctricas para cada necesidad.</h2></div><div class="cards">
+<div class="card"><h3>Instalaciones eléctricas</h3><p>Instalaciones y mantención para hogares, empresas, loteos y parcelas.</p></div>
+<div class="card"><h3>Empalmes y TE1</h3><p>Apoyo en empalmes, instalaciones y documentación asociada a servicios eléctricos.</p></div>
+<div class="card"><h3>Diseño y proyectos</h3><p>Diseño de soluciones eléctricas pensando en seguridad, funcionamiento y crecimiento futuro.</p></div>
+<div class="card"><h3>Automatización inteligente</h3><p>Soluciones de control y automatización para mejorar comodidad, seguridad y eficiencia.</p></div>
+<div class="card"><h3>Paneles solares</h3><p>Alternativas de generación solar para aprovechar mejor la energía y reducir consumos.</p></div>
+<div class="card"><h3>Emergencias 24/7</h3><p>Atención para emergencias eléctricas y situaciones que requieren respuesta oportuna.</p></div>
+</div></div>
 </section>
 
 <section id="proyectos" class="section">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">Trabajo en terreno</div><h2>Nuestros proyectos</h2><p>Algunas imágenes de trabajos e instalaciones realizadas en terreno.</p></div>
-    <div class="gallery">
-      <img src="loteo-empalmes.jpeg" alt="Proyecto de empalmes eléctricos para loteo en la Región del Maule">
-      <div class="small">
-        <img src="tablero-control.jpeg" alt="Tablero de control eléctrico instalado">
-        <img src="empalmes-instalacion.jpeg" alt="Instalación de empalmes y tendido eléctrico">
-      </div>
-    </div>
-    <div class="project-note">
-      <strong>¿Tienes un loteo o varias parcelas?</strong>
-      <span>Realizamos proyectos desde cero y ofrecemos precios especiales cuando se ejecutan varios empalmes dentro de un mismo proyecto.</span>
-    </div>
-  </div>
+<div class="container"><div class="section-head"><div class="eyebrow">Proyectos</div><h2>Trabajos y soluciones realizadas.</h2><p>Conoce parte de las soluciones eléctricas que desarrollamos para distintos tipos de clientes y proyectos.</p></div><div class="cards">
+<div class="card"><img src="loteo-empalmes.jpeg" alt="Empalmes eléctricos para loteos"><h3>Empalmes para loteos</h3><p>Soluciones de distribución y conexión eléctrica para proyectos de loteos.</p></div>
+<div class="card"><img src="proyecto-eléctrico.png" alt="Proyecto eléctrico"><h3>Proyectos eléctricos</h3><p>Diseño y ejecución de soluciones eléctricas adaptadas a cada proyecto.</p></div>
+<div class="card"><img src="tablero-control.jpeg" alt="Tablero de control eléctrico"><h3>Tableros y control</h3><p>Implementación y organización de sistemas de control y distribución eléctrica.</p></div>
+</div></div>
 </section>
 
-<section class="section alt">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">Nuestro compromiso</div><h2>¿Por qué elegir NOVAVOLTAIC?</h2></div>
-    <div class="why">
-      <div class="card"><div class="icon">✓</div><h3>Responsabilidad</h3><p>Nos tomamos cada trabajo con seriedad y atención al detalle.</p></div>
-      <div class="card"><div class="icon">⚙</div><h3>Soluciones a medida</h3><p>Evaluamos cada necesidad antes de proponer una solución.</p></div>
-      <div class="card"><div class="icon">⚡</div><h3>Respuesta 24/7</h3><p>Disponibilidad para atender emergencias eléctricas.</p></div>
-      <div class="card"><div class="icon">📍</div><h3>Región del Maule</h3><p>Atención de servicios y proyectos en la región.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="cta">
-  <div class="container cta-inner">
-    <div><h2>¿Necesitas un servicio eléctrico?</h2><p>Cuéntanos qué necesitas y evaluamos tu proyecto o emergencia.</p></div>
-    <div class="actions"><a class="btn btn-primary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC,%20necesito%20un%20servicio%20eléctrico." target="_blank" rel="noopener">WhatsApp 24/7</a><a class="btn btn-secondary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20el%C3%A9ctrico">Solicitar cotización</a></div>
-  </div>
+<section id="contacto" class="section contact">
+<div class="container"><div class="contact-box"><div><div class="eyebrow">Contacto</div><h2>¿Necesitas una solución eléctrica?</h2><p>Cuéntanos tu proyecto, emergencia o necesidad y conversemos sobre la mejor alternativa.</p></div><div class="actions"><a class="btn btn-primary" href="https://wa.me/56981222188?text=Hola%20NOVAVOLTAIC%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20el%C3%A9ctrico." target="_blank" rel="noopener">WhatsApp 24/7</a><a class="btn btn-secondary" href="mailto:empresanovavoltaic@gmail.com?subject=Solicitud%20de%20cotizaci%C3%B3n">Solicitar cotización</a></div></div></div>
 </section>
 </main>
-
-<footer>
-  <div class="container footer-grid">
-    <div><div class="footer-title">NOVAVOLTAIC SpA</div><p>Soluciones eléctricas para hogares, empresas y proyectos en la Región del Maule.</p></div>
-    <div><div class="footer-title">Servicios</div><ul><li>Mantención eléctrica</li><li>Instalaciones monofásicas y trifásicas</li><li>Empalmes</li><li>TE1</li><li>Emergencias 24/7</li><li>Loteos y parcelas</li></ul></div>
-    <div><div class="footer-title">Contacto</div><p>Región del Maule</p><p><strong>WhatsApp / teléfono:</strong><br><a href="https://wa.me/56981222188" target="_blank" rel="noopener">+56 9 8122 2188</a></p><p><strong>Correo:</strong><br><a href="mailto:empresanovoltaic@gmail.com">empresanovoltaic@gmail.com</a></p></div>
-  </div>
-  <div class="container copyright">© 2026 NOVAVOLTAIC SpA. Todos los derechos reservados.</div>
-</footer>
+<footer class="footer"><div class="container"><strong>NOVAVOLTAIC SpA</strong> · Soluciones eléctricas en la Región del Maule.</div></footer>
 </body>
 </html>
